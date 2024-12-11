@@ -6,6 +6,7 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DrugsModule } from './drugs/drugs.module';
+import { PrescriptionsModule } from './prescriptions/prescriptions.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { DrugsModule } from './drugs/drugs.module';
       inject: [ConfigService],
     }),
     DrugsModule,
+    PrescriptionsModule,
   ],
 })
 export class AppModule {}
